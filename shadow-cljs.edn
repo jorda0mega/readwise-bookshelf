@@ -1,15 +1,9 @@
 ;; shadow-cljs configuration
-{:deps
- {:aliases [:cljs]}
-
+{:deps     {:aliases [:cljs]}
  :dev-http {8020 "public"}
- :nrepl {:port 3333}
-
- :builds
- {:app
-  {:target :browser
-   :output-dir "public/js"
-   :asset-path "/js"
-   :modules
-   {:main
-    {:init-fn readwise-bookshelf.app/init}}}}}
+ :nrepl    {:port 3333}
+ :builds   {:app {:target     :browser
+                  :output-dir "public/js"
+                  :asset-path "/js"
+                  :modules    {:main
+                  {:init-fn readwise-bookshelf.app/init}}}}}
