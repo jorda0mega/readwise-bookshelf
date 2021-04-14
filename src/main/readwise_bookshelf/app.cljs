@@ -13,8 +13,8 @@
 (defn app
   []
   ;[:div.flex.h-screen.items-center.justify-center.bg-yellow-50
-  ;[APITokenPage]
-  [:div.mx-40.my-20
+  ; [APITokenPage]])
+  [:div
    [BookshelfPage]])
 
 (defn render

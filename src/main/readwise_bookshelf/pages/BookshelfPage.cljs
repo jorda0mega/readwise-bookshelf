@@ -29,10 +29,7 @@
 
 (defn BookshelfPage
   []
-  [:div
-  ;[BookCardGrid
-    [:ul.grid.grid-cols-2.gap-x-6.gap-y-10.sm:grid-cols-3.sm:gap-x-6.lg:grid-cols-5.xl:gap-x-32.gap-y-16 {:role "list"}
-     (doall (map (fn [book]
-                   (let [book-title (:title book)
-                         cover-url (:cover_image_url book)]
-                     [BookCard book-title cover-url])) mock-data))]])
+  [:div.component
+   ;[BookCardGrid
+   [:ul.align {:role "list"}
+    (doall (map BookCard mock-data))]])

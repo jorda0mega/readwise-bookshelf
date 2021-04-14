@@ -8,6 +8,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: "100%",
       fontFamily: {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
