@@ -14,7 +14,7 @@
     padding: 0;
 }
 
-::before,
+/*::before,*/
 ::after {
     content: "";
 }
@@ -109,6 +109,7 @@ Table of Contents
 */
 
 .book {
+    margin: 2rem;
     position: relative;
     width: 160px;
     height: 220px;

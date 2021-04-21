@@ -15,22 +15,22 @@
   ;[{:keys {id book-title book-author cover_image_url :as cover-url]}]
   [{id :id, book-title :book-title book-author :book-author, cover-url :cover_image_url}]
   [:li {:key id}
-   [:figure.book
-    [:ul.hardcover_front
+   [:figure {:class "book clear-both mt-20 mr-auto mb-5 w-full text-center"}
+    [:ul {:class "hardcover_front"}
      [:li
-      [:img.h-full.w-full {:src cover-url :alt book-title}]]
+      [:img {:class "h-full w-full" :src cover-url :alt book-title}]]
      [:li]]
-    [:ul.page
+    [:ul {:class "page"}
      [:li]
      [:li
-      [:a.btn {:href "#"} "Highlights"]]
+      [:a {:class "btn" :href "#"} "Highlights"]]
      [:li]
      [:li]
      [:li]]
-    [:ul.hardcover_back
+    [:ul {:class "hardcover_back"}
      [:li]
      [:li]]
-    [:ul.book_spine
+    [:ul {:class "book_spine"}
      [:li]
      [:li]]]])
     ;[:figcaption

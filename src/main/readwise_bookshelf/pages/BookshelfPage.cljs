@@ -15,13 +15,16 @@
   [response]
   (timbre/info response))
 
+(def token
+  "cWChZrL4hPjlfJSExJaT97tBEu36UIX5bNZZ0k3iCTWsYAeTRRWlgfb8st7LnSLXBHQkQPBzA29d8ib9xpmQEoFUY3pDwQlDT3H8cVeOYt7npC6KU3yO4K7LD2KNaW2f13pqDCCz3BXVBaTSSuixQHvx2tErYXpMgfB9BwUOHKXfXrelOx7q2Mz5tAeIWJG5xnu3Ulf0")
+
 (defn fetch-books
   "makes API call to readwise to fetch all items with category books"
   [success-fn]
   (GET "https://readwise.io/api/v2/books/" {:headers         {:access-control-allow-origin   [#"http://127.0.0.1:8020/"]
                                                               :access-control-allows-methods ["GET" "POST"]
                                                               :access-control-allow-headers  ["Content-Type, Authorization"]
-                                                              :authorization                 (str "Token " "cWChZrL4hPjlfJSExJaT97tBEu36UIX5bNZZ0k3iCTWsYAeTRRWlgfb8st7LnSLXBHQkQPBzA29d8ib9xpmQEoFUY3pDwQlDT3H8cVeOYt7npC6KU3yO4K7LD2KNaW2f13pqDCCz3BXVBaTSSuixQHvx2tErYXpMgfB9BwUOHKXfXrelOx7q2Mz5tAeIWJG5xnu3Ulf0")}
+                                                              :authorization                 (str "Token " token)}
                                             :handler         success-fn
                                             :error-handler   fetch-books-error
                                             :response-format :json
@@ -29,7 +32,6 @@
 
 (defn BookshelfPage
   []
-  [:div.component
-   ;[BookCardGrid
-   [:ul.align {:role "list"}
+  [:div {:class "component"}
+   [:ul {:class "mt-32 mx-32 grid grid-cols-4 place-items-center" :role "list"}
     (doall (map BookCard mock-data))]])
