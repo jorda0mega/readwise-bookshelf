@@ -2,4 +2,11 @@
   (:require [shadow.resource :as rc]
             [taoensso.timbre :as timbre]))
 
-(def mock-data (:results (js->clj (.parse js/JSON (rc/inline "mock-data.json")) :keywordize-keys true)))
+(def mock-data (-> (rc/inline "mock-data.json")
+                   js/JSON.parse
+                   (js->clj :keywordize-keys true)
+                   :results))
+(def mock-highlights-data (-> (rc/inline "mock-highlights-data.json")
+                              js/JSON.parse
+                              (js->clj :keywordize-keys true)
+                              :results))

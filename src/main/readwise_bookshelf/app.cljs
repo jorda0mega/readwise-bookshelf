@@ -2,9 +2,9 @@
   (:require [reagent.dom :as dom]
             [re-frame.core :as rf]
             [readwise-bookshelf.db :as db]
-            [readwise-bookshelf.pages.APITokenPage :refer [APITokenPage]]
-            [readwise-bookshelf.pages.BookshelfPage :refer [BookshelfPage]]
-            [readwise-bookshelf.pages.HighlightPage :refer [HighlightPage]]))
+            [readwise-bookshelf.pages.api-token-page :refer [APITokenPage]]
+            [readwise-bookshelf.pages.bookshelf-page :refer [BookshelfPage]]
+            [readwise-bookshelf.pages.highlight-page :refer [HighlightPage]]))
 
 (rf/reg-event-db
   :initialize
@@ -15,8 +15,9 @@
   []
   ;[:div.flex.h-screen.items-center.justify-center.bg-yellow-50
   ; [APITokenPage]])
-  [BookshelfPage])
-  ;[HighlightPage])
+  [:div.bg-grey-50
+   [BookshelfPage]
+   [HighlightPage]])
 
 (defn render
   []

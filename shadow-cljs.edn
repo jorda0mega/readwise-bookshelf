@@ -6,4 +6,4 @@
                   :output-dir "public/js"
                   :asset-path "/js"
                   :modules    {:main
-                  {:init-fn readwise-bookshelf.app/init}}}}}
+                               {:init-fn readwise-bookshelf.app/init}}}}}

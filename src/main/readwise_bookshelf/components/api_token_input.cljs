@@ -1,4 +1,4 @@
-(ns readwise-bookshelf.components.APITokenInput
+(ns readwise-bookshelf.components.api-token-input
   (:require [nano-id.core :refer [custom]]))
 
 (def token-generator (custom "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" 200))

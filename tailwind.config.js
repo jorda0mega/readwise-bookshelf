@@ -13,7 +13,7 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: ["focus"],
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),

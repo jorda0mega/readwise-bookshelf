@@ -1,8 +1,7 @@
-(ns readwise-bookshelf.pages.BookshelfPage
+(ns readwise-bookshelf.pages.bookshelf-page
   (:require [ajax.core :refer [GET]]
             [taoensso.timbre :as timbre]
-            [readwise-bookshelf.components.BookCard :refer [BookCard]]
-            [readwise-bookshelf.components.BookCardGrid :refer [BookCardGrid]]
+            [readwise-bookshelf.components.book-card :refer [BookCard]]
             [readwise-bookshelf.util :refer [mock-data]]))
 
 (defn fetch-books-error
@@ -33,5 +32,5 @@
 (defn BookshelfPage
   []
   [:div {:class "component"}
-   [:ul {:class "mt-32 mx-32 grid grid-cols-4 place-items-center" :role "list"}
+   [:ul {:class "mx-32 grid grid-cols-4 place-items-center" :role "list"}
     (doall (map BookCard mock-data))]])
